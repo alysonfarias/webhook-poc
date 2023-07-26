@@ -1,6 +1,13 @@
 const express = require('express');
+const cors = require('cors'); // Import the CORS package
+
+
 const app = express();
 const port = 4000;
+
+
+// Enable CORS for all routes
+app.use(cors());
 
 app.post('/notificationEndpoint', (req, res) => {
   console.log("🚀 ~ file: clientNotificationEndpoint.js:6 ~ app.post ~ res:", res.body)
